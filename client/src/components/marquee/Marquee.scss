@@ -1,0 +1,27 @@
+@use '../../styles/global.scss' as v;
+
+.scrolling-text {
+  width: 100dvw;
+  overflow: hidden;
+  white-space: nowrap;
+  position: relative;
+  transition: color 0.2s ease-in-out;
+  color: v.$grey;
+  &:hover {
+    color: v.$text;
+  }
+
+  .text {
+    display: inline-block;
+    animation: scrollText 200s linear infinite;
+  }
+
+  @keyframes scrollText {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-100%);
+    }
+  }
+}

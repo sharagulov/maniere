@@ -1,0 +1,127 @@
+@use "@/styles/global.scss" as v;
+
+.m-container {
+  position: relative;
+  height: 100dvh;
+  width: 100dvw;
+  overflow-y: auto;
+}
+
+.m-blocks {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.m-block {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0px 10%;
+}
+
+.m-top-block {
+  position: relative;
+  display: flex;
+  align-items: center;
+  z-index: 0;
+
+  .m-left-text {
+    user-select: none;
+  }
+
+  .m-left-img {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+
+    img {
+      width: clamp(30px, 30dvw, 400px);
+      transition: width 0.2s ease-in-out;
+      border-radius: 30px;
+
+      &:hover {
+        width: clamp(30px, 35dvw, 500px);
+      }
+    }
+  }
+}
+
+.m-bot-block {
+  z-index: 1;
+
+  .m-bot-desc {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+
+    .m-bot-buy {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+
+
+    }
+  }
+}
+
+.m-desc-func {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 15px;
+  z-index: 1;
+
+  .description {
+    transition: opacity 0.2s ease-in-out;
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+  }
+
+  &.visible {
+    .description {
+      opacity: 1;
+      max-height: 200px;
+    }
+  }
+
+  .chevron {
+    transition: transform 0.2s ease-in-out;
+  }
+
+  &.visible {
+    .chevron {
+      transform: rotate(180deg);
+    }
+  }
+
+  .m-desc-show {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    user-select: none;
+  }
+}
+
+.mega {
+  line-height: 1;
+  display: inline-block;
+  vertical-align: bottom;
+  font-size: clamp(30px, 70dvw, 1000px);
+  background: linear-gradient(90deg, rgba(19, 19, 19, 0) 0%, rgba(26, 26, 26, 0.25) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: bold;
+}
+
+@media (max-width: v.$bigw) {
+  .desktop {
+    display: none;
+  }
+}
