@@ -22,7 +22,7 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "WATCHPACK_POLLING=true craco start",
+    "start": "NODE_OPTIONS=\"--max-old-space-size=512\" WATCHPACK_POLLING=true craco start",
     "build": "craco build",
     "test": "craco test",
     "eject": "react-scripts eject"

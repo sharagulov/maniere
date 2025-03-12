@@ -56,7 +56,6 @@
 
   .m-bot-desc {
     display: flex;
-    align-items: center;
     justify-content: space-between;
     gap: 20px;
 
@@ -80,8 +79,6 @@
   .description {
     transition: opacity 0.2s ease-in-out;
     opacity: 0;
-    max-height: 0;
-    overflow: hidden;
   }
 
   &.visible {
@@ -123,5 +120,17 @@
 @media (max-width: v.$bigw) {
   .desktop {
     display: none;
+  }
+
+}
+
+@media (max-width: v.$middlew) {
+  .m-bot-desc {
+    flex-direction: column;
+    align-items: start;
+  }
+
+  .m-desc-func {
+    margin-top: 30px;
   }
 }
