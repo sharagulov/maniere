@@ -1,7 +1,7 @@
 import './Marquee.scss'
 
 export default function Marquee({r}) {
-  const text = " mainere ".repeat(r);
+  const text = " maniere ".repeat(r);
 
   return (
     <div className="scrolling-text">

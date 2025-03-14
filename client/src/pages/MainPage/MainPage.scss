@@ -1,10 +1,16 @@
 @use "@/styles/global.scss" as v;
 
+.m-total {
+  overflow-x: hidden;
+}
+
 .m-container {
   position: relative;
   height: 100dvh;
   width: 100dvw;
   overflow-y: auto;
+  display: flex;
+  align-items: center;
 }
 
 .m-blocks {
@@ -40,12 +46,12 @@
     bottom: 0;
 
     img {
-      width: clamp(30px, 30dvw, 400px);
+      width: clamp(30px, 20dvw, 400px);
       transition: width 0.2s ease-in-out;
       border-radius: 30px;
 
       &:hover {
-        width: clamp(30px, 35dvw, 500px);
+        width: clamp(30px, 25dvw, 500px);
       }
     }
   }
@@ -59,12 +65,10 @@
     justify-content: space-between;
     gap: 20px;
 
-    .m-bot-buy {
+    .m-bot-desc-flex {
       display: flex;
       align-items: center;
       gap: 10px;
-
-
     }
   }
 }
@@ -110,7 +114,7 @@
   line-height: 1;
   display: inline-block;
   vertical-align: bottom;
-  font-size: clamp(30px, 70dvw, 1000px);
+  font-size: clamp(30px, 50dvw, 1000px);
   background: linear-gradient(90deg, rgba(19, 19, 19, 0) 0%, rgba(26, 26, 26, 0.25) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -132,5 +136,18 @@
 
   .m-desc-func {
     margin-top: 30px;
+  }
+}
+
+
+.autoShow {
+  opacity: 0.25;
+  transition: opacity 0.5s ease-in-out 0.25s, filter 0.5s ease-in-out;
+  filter: blur(10px);
+
+  &.visible {
+    opacity: 1;
+    filter: blur(0px);
+
   }
 }

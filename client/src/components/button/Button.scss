@@ -13,6 +13,15 @@
   transition: 0.2s ease-in-out;
   color: white;
   background-color: black;
+  
+  &.greyed {
+    color: black;
+    background-color: v.$lowgrey;
+
+    &:hover {
+      background-color: v.$grey;
+    }
+  }
 
   &:hover {
     background-color: v.$accent;
