@@ -6,13 +6,12 @@
 
 .m-container {
   position: relative;
-  height: 100dvh;
+  min-height: 100dvh;
   width: 100dvw;
-  overflow-y: auto;
+  overflow-y: visible;
   display: flex;
   align-items: center;
 }
-
 .m-blocks {
   display: flex;
   flex-direction: column;
@@ -22,6 +21,7 @@
 
 .m-block {
   display: flex;
+  flex: 1;
   flex-direction: column;
   justify-content: center;
   margin: 0px 10%;
