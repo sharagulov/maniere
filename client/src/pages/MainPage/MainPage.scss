@@ -2,6 +2,9 @@
 
 .m-total {
   overflow-x: hidden;
+  * {
+    overflow: hidden;
+  }
 }
 
 .m-container {
@@ -90,7 +93,6 @@
   &.visible {
     .description {
       opacity: 1;
-      max-height: 200px;
     }
   }
 

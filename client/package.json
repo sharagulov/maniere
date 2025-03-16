@@ -23,7 +23,7 @@
   },
   "scripts": {
     "start": "NODE_OPTIONS=\"--max-old-space-size=512\" WATCHPACK_POLLING=true craco start",
-    "build": "craco build",
+    "build": "craco build && sudo rm -rf /var/www/maniere-frontend/* && sudo cp -R build/* /var/www/maniere-frontend",
     "test": "craco test",
     "eject": "react-scripts eject"
   },
