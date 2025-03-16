@@ -4,18 +4,23 @@ const PopupContext = createContext();
 
 export function PopupProvider({ children }) {
   const [isVisible, setIsVisible] = useState(false);
+  const [popupData, setPopupData] = useState(null);
 
-  const showPopup = () => {
+  const showPopup = (data) => {
     setIsVisible(true);
-  }
-
+    setPopupData(data);
+  };
+  
   const hidePopup = () => {
     setIsVisible(false);
+    setTimeout(() => {
+      setPopupData(null);
+    }, 300)
   };
 
 
   return (
-    <PopupContext.Provider value={{ isVisible, showPopup, hidePopup }}>
+    <PopupContext.Provider value={{ isVisible, showPopup, hidePopup, popupData }}>
       {children}
     </PopupContext.Provider>
   );

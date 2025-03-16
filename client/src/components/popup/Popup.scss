@@ -1,0 +1,117 @@
+@use "@/styles/global.scss" as v;
+
+.popup-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.25);
+  backdrop-filter: blur(10px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  z-index: 9999;
+
+  &.visible {
+    opacity: 1;
+    pointer-events: auto;
+  }
+}
+
+.popup-content {
+  min-width: 300px;
+  max-width: clamp(100px, 90dvw, 1600px);
+  max-height: clamp(600px, 90dvh, 9999px);
+  background: #fff;
+  border-radius: 10px;
+  position: relative;
+  display: flex;
+}
+
+.popup-left {
+  flex: 1;
+  position: relative;
+
+  img {
+    width: 100%;
+    height: 100%;
+    border-radius: 8px 0px 0px 8px;
+  }
+}
+
+.popup-right {
+  flex: 1;
+  position: relative;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+
+.popup-char {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  width: 100%;
+
+  .popup-char-item {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    &:hover {
+      color: black;
+    }
+
+    span {
+      background-color: white;
+      z-index: 2;
+    }
+  }
+
+  .popup-char-item::before {
+    border-bottom: 1px dotted v.$lowgrey;
+    bottom: 1em;
+    content: "";
+    display: block;
+    left: 0;
+    position: absolute;
+    width: 100%;
+  }
+}
+
+.popup-rules {
+  display: flex;
+  gap: 5px;
+  justify-content: center;
+
+  .rule-image {
+    img {
+      width: 30px;
+      filter: saturate(0);
+    }
+  }
+}
+
+
+.popup-close {
+  position: absolute;
+  cursor: pointer;
+  right: 20px; top: 20px;
+}
+
+
+@media (max-width: 800px) {
+  .popup-left {
+    display: none;
+  }
+}
+
+@media (max-height: 800px) {
+  .popup-left {
+    display: none;
+  }
+}

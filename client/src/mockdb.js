@@ -6,7 +6,17 @@ const goods = [
     "imgpath": "/img/1.jpg",
     "number": ".01",
     "cost": "$3,999.00",
-    "costper": "$333.25"
+    "costper": "$333.25",
+    "collection": "Autumn-Winter 2024",
+    "type": "Sweater",
+    "style": "Black Suite",
+    "series": "Vatour",
+    "sizeOnModel": "48",
+    "explicit": "No",
+    "sleeveType": "Middle",
+    "features": "Warm & stylish",
+    "brand": "Sylution",
+    "rules": ["/laundry/1.jpg", "/laundry/10.jpg", "/laundry/9.jpg", "/laundry/13.jpg"]
   },
   {
     "id": 2,
@@ -15,7 +25,17 @@ const goods = [
     "imgpath": "/img/2.jpg",
     "number": ".02",
     "cost": "$4,250.00",
-    "costper": "$400.75"
+    "costper": "$400.75",
+    "collection": "Autumn-Winter 2025",
+    "type": "Sweater",
+    "style": "White Pre-over",
+    "series": "Ghost",
+    "sizeOnModel": "50",
+    "explicit": "No",
+    "sleeveType": "Spacious",
+    "features": "Sexy & roomy",
+    "brand": "Lethrone",
+    "rules": ["/laundry/3.jpg", "/laundry/6.jpg", "/laundry/9.jpg", "/laundry/15.jpg"]
   },
   {
     "id": 3,
@@ -24,7 +44,17 @@ const goods = [
     "imgpath": "/img/3.jpg",
     "number": ".03",
     "cost": "$1,999.50",
-    "costper": "$200.15"
+    "costper": "$200.15",
+    "collection": "Spring-Summer 2024",
+    "type": "Light sweater",
+    "style": "White Suite",
+    "series": "Vatour",
+    "sizeOnModel": "48",
+    "explicit": "No",
+    "sleeveType": "Long & Spacious",
+    "features": "Easywear, Wash&Dry",
+    "brand": "Sylution",
+    "rules": ["/laundry/2.jpg", "/laundry/11.jpg", "/laundry/6.jpg", "/laundry/18.jpg"]
   },
   {
     "id": 4,
@@ -33,7 +63,17 @@ const goods = [
     "imgpath": "/img/4.jpg",
     "number": ".04",
     "cost": "$2,799.50",
-    "costper": "$250.25"
+    "costper": "$250.25",
+    "collection": "Summer-Autumn 2023",
+    "type": "Short cardigan",
+    "style": "Light",
+    "series": "Evolve ©",
+    "sizeOnModel": "46",
+    "explicit": "No",
+    "sleeveType": "Short",
+    "features": "Soft & Stylish",
+    "brand": "Cardistyle",
+    "rules": ["/laundry/17.jpg", "/laundry/16.jpg", "/laundry/15.jpg", "/laundry/11.jpg"]
   },
   {
     "id": 5,
@@ -42,7 +82,17 @@ const goods = [
     "imgpath": "/img/5.jpg",
     "number": ".05",
     "cost": "$2,999.00",
-    "costper": "$250.99"
+    "costper": "$250.99",
+    "collection": "Winter-Winter 2025",
+    "type": "Sweatshirt",
+    "style": "Gray oversize",
+    "series": "cafe.",
+    "sizeOnModel": "52",
+    "explicit": "No",
+    "sleeveType": "Spacious",
+    "features": "Warm & spacious",
+    "brand": "Easeset",
+    "rules": ["/laundry/17.jpg", "/laundry/16.jpg", "/laundry/15.jpg", "/laundry/11.jpg"]
   },
   {
     "id": 6,
@@ -51,7 +101,17 @@ const goods = [
     "imgpath": "/img/6.jpg",
     "number": ".06",
     "cost": "$3,159.55",
-    "costper": "$300.00"
+    "costper": "$300.00",
+    "collection": "Autumn-Winter 2025",
+    "type": "Sweater",
+    "style": "Olive Pre-over",
+    "series": "Ghost",
+    "sizeOnModel": "48",
+    "explicit": "No",
+    "sleeveType": "Middle",
+    "features": "Skinny & Tight",
+    "brand": "Sylution",
+    "rules": ["/laundry/11.jpg", "/laundry/13.jpg", "/laundry/16.jpg", "/laundry/15.jpg"]
   },
 ];
 
